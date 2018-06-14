@@ -1,0 +1,13 @@
+
+@import '_vars.scss';
+
+body{
+    background-color:$bg-main;
+}
+
+.dlg{
+    display: table !important;
+    font-size: 20px;
+    color: #0c85f7;
+    margin-top: 20px;
+}
