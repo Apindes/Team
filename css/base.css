@@ -69,11 +69,12 @@ button:focus {
 }
 
 .hidden {
-	position: absolute;
+	/*position: absolute;*/
 	overflow: hidden;
 	width: 0;
 	height: 0;
 	pointer-events: none;
+        transform: translateY(100% );
 }
 
 /* Icons */
@@ -91,8 +92,9 @@ main {
 
 /* Header */
 .codrops-header {
-	padding: calc(6vmax - 0.25rem);
-	position: relative;
+	padding: calc(1.5vmax);
+        position: fixed;
+        width: 100%;
 	z-index: 100;
 	display: flex;
 	align-items: flex-start;
@@ -197,7 +199,7 @@ a.demo--current {
 .content__section:first-child,
 .content__section:last-child {
 	height: calc(100vh - 9.875em);
-	text-align: left;
+	/*text-align: left;*/
 }
 
 .content__link {
@@ -239,20 +241,60 @@ a.demo--current {
 	display: block;
 }
 
-.content__text {
+.fixed_content__text {
 	position: absolute;
-	bottom: 6vmax;
-	left: 0;
+	bottom: 7vmax;
 	padding-left: 6vmax;
 	z-index: 1000;
-	line-height: 0.8;
+        text-align: left;
+        width: 40%;
 }
 
+
 .js .ioapi .content__text {
-	position: fixed;
+	line-height: 0.8;
 	opacity: 0;
 	white-space: pre;
         letter-spacing: 14.02px;
+}
+.js .ioapi .content__text h2,.js .ioapi .fixed_content__text {
+       position: fixed;
+}
+.js .ioapi .content__text h2,.js .ioapi .fixed_content__text .team-desc{
+    line-height: 30px;
+    transition: all 1s;
+}
+
+.js .ioapi .content__text h2,.js .ioapi .fixed_content__text .button-holder{
+    display:flex;
+    align-items:center;
+    margin-top: 9%;
+}
+
+.js .ioapi .content__text h2,
+.js .ioapi .fixed_content__text .team-toggle-button{
+    height: 50px;
+    width: 50px;
+    transform: rotate(45deg);
+    border: 2px solid #1b1b1b;
+    position:relative;
+    margin-left: 8px;
+    cursor:pointer;
+}
+.js .ioapi .fixed_content__text .team-toggle-button img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.js .ioapi .content__text h2,.js .ioapi .fixed_content__text .hline{
+    width: 70%;
+    height: 2px;
+    background: #1b1b1b;
+    margin-left: -40%;
 }
 
 .content__text span {

@@ -1,4 +1,11 @@
 body {
-  background-color: black; }
+  background-color: black;
+  font-family: MontserratRegular; }
+
+.dlg {
+  display: table !important;
+  font-size: 20px;
+  color: #0c85f7;
+  margin-top: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
