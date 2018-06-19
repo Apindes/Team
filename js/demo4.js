@@ -48,7 +48,6 @@
             });
             if(this.DOM.description !== undefined && this.DOM.description.desc){
                 this.DOM.description.desc.style.display = 'block';
-//                this.DOM.desc_btn.desc_btn.style.display = 'initial';
                 
             }
             
@@ -110,7 +109,6 @@
             
             if(this.DOM.description !== undefined && this.DOM.description.desc){
                 this.DOM.description.desc.style.display = 'none';
-//                this.DOM.desc_btn.desc_btn.style.display = 'none';
             }
 
             //+Subtitle animation 
@@ -135,9 +133,8 @@
                     sub_letterAnim.translateY = [0,anime.random(0,1) > 0.5 ? -window.innerHeight :  window.innerHeight];
                 }
                 anime(sub_letterAnim);
-//                jQuery('.content__subtext').css('opacity','0');
+
             });
-            //
             
             anime.remove(this.DOM.image);
             anime({
@@ -147,21 +144,6 @@
                 rotate: 0,
                 opacity:0.2
             });
-//            this.DOM.sub_title.sub_letters.forEach((mletter, pos) => {
-//                let sub_letterAnim = {
-//                    targets: mletter,
-//                    duration: 500,
-//                    delay: () => pos*80,
-//                    easing: 'easeOutQuint',
-//                    opacity: {
-//                        value: 0,
-//                        duration: 200,
-//                        easing: 'linear'
-//                    }
-//                };
-//                anime(sub_letterAnim);
-//                mletter.style.opacity = '0';
-//            });
         }
     }
 

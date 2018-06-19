@@ -1,6 +1,7 @@
 @import "_mixins.scss";
 @import "_fonts.scss";
 @import '_vars.scss';
+@import "first-screen.scss"; 
 
 body{
     background-color:$bg-main;
@@ -13,6 +14,11 @@ p{
 h2{
     @include font-f(b);
     font-size:48px;
+}
+h3{
+    font-size:12px;
+    text-transform:uppercase;
+    padding: 30px 0 5px;
 }
 
 .dlg{

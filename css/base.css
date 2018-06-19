@@ -100,6 +100,7 @@ main {
 	align-items: flex-start;
 	align-items: center;
 	flex-wrap: wrap;
+        top: 0;
 }
 
 .codrops-header::before {
@@ -186,6 +187,7 @@ a.demo--current {
 	position: relative;
 	text-align: right;
 	padding: 0 6vmax;
+        padding-right: 12em;
 }
 
 .content__section:first-child {
