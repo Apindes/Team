@@ -191,11 +191,11 @@ a.demo--current {
 }
 
 .content__section:first-child {
-	margin: 0 0 30vh;
+	margin: 0 0 10vh;
 }
 
 .content__section:last-child {
-	margin: 30vh 0 0;
+	margin: 10vh 0 0;
 }
 
 .content__section:first-child,
@@ -254,7 +254,7 @@ a.demo--current {
 
 
 .js .ioapi .content__text {
-	line-height: 0.8;
+	/*line-height: 0.8;*/
 	opacity: 0;
 	white-space: pre;
         letter-spacing: 14.02px;
@@ -274,7 +274,8 @@ a.demo--current {
 }
 
 .js .ioapi .content__text h2,
-.js .ioapi .fixed_content__text .team-toggle-button{
+.js .ioapi .fixed_content__text .team-toggle-button,
+.team-scroll-mouse{
     height: 50px;
     width: 50px;
     transform: rotate(45deg);
@@ -283,7 +284,8 @@ a.demo--current {
     margin-left: 8px;
     cursor:pointer;
 }
-.js .ioapi .fixed_content__text .team-toggle-button img{
+.js .ioapi .fixed_content__text .team-toggle-button img,
+.team-scroll-mouse img{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -291,7 +293,16 @@ a.demo--current {
     right: 0;
     margin: auto;
 }
-
+.team-scroll-mouse img{
+    transform:rotate(-45deg);
+    -webkit-transition: width 2s, height 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 2s;
+   
+}
+.team-scroll-mouse img.animated{
+    height:0;
+    width:0;
+}
 .js .ioapi .content__text h2,.js .ioapi .fixed_content__text .hline{
     width: 70%;
     height: 2px;
@@ -300,16 +311,12 @@ a.demo--current {
 }
 
 .content__text span {
-	display: inline-block;
+    display: inline-block;
 }
 
-.content__contact {
-	font-size: calc(var(--fontsize-scroll-text) / 2);
-	font-family: var(--font-scroll-text);
-}
 
 .content__contact a:last-child {
-	display: block;
+    display: block;
 }
 
 @media screen and (max-width: 50em) {

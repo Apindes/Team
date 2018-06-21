@@ -7,7 +7,7 @@ var toggler = {
             Array.from(section).forEach(function(element){
                 element.addEventListener('click', toggleVisibility);  
             }); 
-            function toggleVisibility(){
+        toggle: function toggleVisibility(){
                 var box = this.parentElement.parentElement;
                 var text_block = box.querySelector('.team-desc');
                 var btn = box.querySelector(".btn");
