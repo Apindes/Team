@@ -21,6 +21,8 @@ h3{
     text-transform:uppercase;
     padding: 30px 0 5px;
     color: rgb(12, 133, 247);
+}
+.explanation h3{
     letter-spacing: 4.56px;
 }
 
@@ -36,5 +38,9 @@ h3{
         letter-spacing: 1px;
     }
 } 
+
+.team-desc.hidden{
+    height:0;
+}
 
 @import "_header.scss";

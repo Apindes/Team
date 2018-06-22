@@ -19,6 +19,13 @@
             this.DOM.description = {desc: this.DOM.el.querySelector('.fixed_content__text')};
             this.DOM.desc_btn = {desc_btn: this.DOM.el.querySelector('.team-toggle-button')};
             this.DOM.team_desc = {team_desc: this.DOM.el.querySelector('.team-desc')};
+            
+            this.DOM.img2 = this.DOM.el.querySelector(".under");
+            this.DOM.img = this.DOM.el.querySelector("img:not(.under)");
+            
+            this.DOM.btnplus = this.DOM.el.querySelector(".btn");
+            this.DOM.btnminus = this.DOM.el.querySelector(".btn2");
+            
             observer.observe(this.DOM.el);
         }
         enter(direction = 'down') {
@@ -136,7 +143,16 @@
                 anime(sub_letterAnim);
                 if(!this.DOM.el.classList.contains("explanation")){
                     collapse(this.DOM.team_desc.team_desc, this.DOM.description.desc, this.DOM.desc_btn.desc_btn); //доделать!
+                    // Прячем первое и открываем второе изображения
+                    this.DOM.img.classList.remove("hidden");
+                    this.DOM.img2.classList.add("hidden");
+                    
+                    this.DOM.btnplus.style.opacity = 1;
+                    this.DOM.btnminus.style.opacity = 0;
+                    
                 }
+                
+                 
 
             });
             
@@ -213,7 +229,11 @@ var toggler = {
                 var btn1 = box.querySelector(".btn");
                 var btn2 = box.querySelector(".btn2");
                 swap(text_block,btn1,btn2);
-                   
+                var img2 = box.parentElement.querySelector(".under");
+                var img = box.parentElement.querySelector("img:not(.under)");
+                // Прячем первое и открываем второе изображения
+                toggleClass(img2,'hidden');
+                toggleClass(img,'hidden'); 
             }
         swap: function swap(text_block,btn1,btn2){
                 if(text_block.classList.contains('hidden')){
@@ -252,4 +272,22 @@ function fadeIn(element) {
         element.style.opacity = op;
         op += 0.1;
     }, 10);
+}
+
+
+function toggleClass(element,class_name){
+    if (element.classList) { 
+        element.classList.toggle(class_name);
+    } else {
+        // For IE9
+        var classes = element.className.split(" ");
+        var i = classes.indexOf(class_name);
+
+        if (i >= 0){ 
+            classes.splice(i, 1);
+        }else{ 
+            classes.push(class_name);
+            element.className = classes.join(" "); 
+        }
+    }
 }

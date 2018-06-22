@@ -71,10 +71,11 @@ button:focus {
 .hidden {
 	/*position: absolute;*/
 	overflow: hidden;
-	width: 0;
-	height: 0;
+/*	width: 0;
+	height: 0;*/
 	pointer-events: none;
         transform: translateY(100% );
+        opacity:0 !important;
 }
 
 /* Icons */
@@ -205,6 +206,7 @@ a.demo--current {
 }
 
 .content__link {
+        position:relative;
 	display: block;
 	position: relative;
 	max-width: 100%;
@@ -222,6 +224,12 @@ a.demo--current {
 	margin: 0 0 0 auto;
         filter: grayscale();
         transition: all 1s;
+        opacity:1;
+}
+.content__img.under{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .content__main,
