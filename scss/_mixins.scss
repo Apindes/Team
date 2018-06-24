@@ -1,0 +1,12 @@
+
+
+@mixin font-f($type:n){
+    @if($type == 'n'){
+        font-family: MontserratRegular;
+    }@elseif($type == 'b'){
+        font-family: MontserratBold;
+    }@elseif($type == 'l'){
+        font-family: MontserratExtraLight;
+    } 
+}
+

@@ -1,0 +1,152 @@
+<html lang="en" class="js">
+    <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Scrolling Letters Animation | Demo 4 | Codrops</title>
+	<meta name="description" content="A scrolling letters animation where some text changes depending on the page's scroll position">
+	<meta name="keywords" content="scroll, letters, animation, javascript, web design, web development">
+	<meta name="author" content="Codrops">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/demo4.css">
+	<link rel="stylesheet" type="text/css" href="css/pater.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	<script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    </head>
+    <body class="demo-4 ioapi">
+        <div class="left-nav sectionMap">
+            <ul>
+                <li class="nav-section navs active" id="slide1" data-id="1"><a href="#"><span class="border"></span></a></li>
+                <li class="nav-section navs" id="slide2" data-id="2"><a href="#"><span class="border"></span></a></li>
+                <li class="nav-section navs" id="slide3" data-id="3"><a href="#"><span class="border"></span></a></li>
+                <li class="nav-section navs" id="slide4" data-id="4"><a href="#"><span class="border"></span></a></li>
+                <li class="nav-section navs" id="slide5" data-id="5"><a href="#"><span class="border"></span></a></li>
+                <li class="nav-section navs" id="slide6" data-id="6"><a href="#"><span class="border"></span></a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <header class="codrops-header">
+               <div class="logo">
+                    <img src="img/white-logo.png" alt="logo"/>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li class="nav-item">Главная</li>
+                        <li class="nav-item">Читать Блог</li>
+                        <li class="nav-item">Обучение</li>
+                        <li class="nav-item active">Команда Фаза Роста</li>
+                    </ul>
+                </div>
+                <div class="auth">
+                    <div class="search">
+                        <img src="img/search.png" width="15" alt="search icon">
+                    </div>
+                    <div class="login" >
+                        <img src="img/login.png" width="30" alt="log in">
+                    </div>
+                </div>
+            </header>
+        </div>
+	<main>
+            
+            <div class="content">
+		<div class="content__section">
+                    <h2 class="content__text" style="opacity: 1;">
+                        <span class="char1" data-initial="B" style="opacity: 1; transform: translateX(0px);"></span>
+                        <span class="char2" data-initial="e" style="opacity: 1; transform: translateX(0px);">Р</span>
+                        <span class="char3" data-initial="a" style="opacity: 1; transform: translateX(0px);">и</span>
+                        <span class="char4" data-initial="r" style="opacity: 1; transform: translateY(0px);">м</span>
+                        <span class="char5" data-initial="d" style="opacity: 1; transform: translateY(0px);"></span>
+                        <span class="char6" data-initial=" " style="opacity: 1; transform: translateY(0px);">т</span>
+                        <span class="char7" data-initial="M" style="opacity: 1; transform: translateY(0px);">и</span>
+                        <span class="char8" data-initial="e" style="opacity: 1; transform: translateY(0px);">м</span>
+                        <span class="char9" data-initial="n" style="opacity: 1; transform: translateY(0px);"></span>
+                    </h2>
+		</div>
+                <!--Александр-->
+		<div class="content__section">
+                    <a class="content__link"><img class="content__img" src="img/set4/1.png" alt="img" style="transform: rotate(0deg);"></a>
+                    <div class="fixed_content__text">
+                        <h2 class="content__text" style="opacity: 1;"><span class="char1" data-initial="B" style="opacity: 1; transform: translateX(0px);">А</span><span class="char2" data-initial="л" style="opacity: 1; transform: translateX(0px);">л</span><span class="char3" data-initial="е" style="opacity: 1; transform: translateX(0px);">е</span><span class="char4" data-initial="к" style="opacity: 1; transform: translateY(0px);">к</span><span class="char5" data-initial="с" style="opacity: 1; transform: translateY(0px);">с</span><span class="char6" data-initial="а" style="opacity: 1; transform: translateY(0px);">a</span><span class="char7" data-initial="н" style="opacity: 1; transform: translateY(0px);">н</span><span class="char8" data-initial="д" style="opacity: 1; transform: translateY(0px);">д</span><span class="char9" data-initial="р" style="opacity: 1; transform: translateY(0px);">р</span><br></h2>
+                        <h3 class="content__subtext" style="opacity:1;"><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(0px);">м</span><span class="char11" data-initial="n" style="opacity: 1; transform: translateY(500px);">а</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(450px);">г</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(0px);"> и </span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(200px);">м</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(0px);">а</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(0px);">р</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(0px);">к</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(200px);">е</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(0px);">т</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(670px);">о</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(0px);">л</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(0px);">о</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(-200px);">г</span></h3>
+                        <div class="team-desc hidden">
+                            <div class="team-details">
+                                <p>Для того, чтобы о продуктах компании узнали, в обычном мире используют маркетинг, но моя команда работает не в обычном мире. Мы продвигаемся с помощью магии:-)<br><br>
+
+Главный волшебник в Фаза Роста — это Саша.
+Большинство учениц, отвечая на вопрос “Как вы узнали о тренингах Ярослава Самойлова?”, говорят, что увидели рекламу в Facebook именно в тот момент, когда им это было позарез необходимо.
+“Ярослав, вы волшебник”, — говорят девушки. Нет, это не так — вся магия у нас от Александра.<br><br>
+
+Знание аудитории и щепотка волшебства — вот рецепт правильного маркетинга от Саши.
+</p>
+                            </div>
+                        </div>
+                        <div class="button-holder">
+                            <div class="hline"></div>
+                            <div class="team-toggle-button">
+                                <img class="btn"  src="img/x.png" alt="button"/>
+                                <img class="btn2"  src="img/-.png" alt="button" style="opacity:0;transform: rotate(-90deg);"/>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            <!-- Мария -->    
+                <div class="content__section">
+                    <a class="content__link"><img class="content__img" src="img/set4/2.png" alt="img" style="transform: rotate(0deg);"></a>
+                    <div class="fixed_content__text">
+                        <h2 class="content__text" style="opacity: 1;"><span class="char1" data-initial="м" style="opacity: 0; transform: translateX(912px);">M</span><span class="char2" data-initial="а" style="opacity: 0; transform: translateY(763px);">а</span><span class="char3" data-initial="р" style="opacity: 0; transform: translateX(-912px);">р</span><span class="char4" data-initial="и" style="opacity: 0; transform: translateY(763px);">и</span><span class="char5" data-initial="я" style="opacity: 0; transform: translateX(-912px);">я</span></h2>
+                        <h3 class="content__subtext" style="opacity:1;"><span class="char6" data-initial="м" style="opacity: 1; transform: translateY(0px);">м</span><span class="char7" data-initial="е" style="opacity: 1; transform: translateY(500px);">е</span><span class="char8" data-initial="н" style="opacity: 1; transform: translateY(450px);">н</span><span class="char9" data-initial="е" style="opacity: 1; transform: translateY(0px);">е</span><span class="char10" data-initial="д" style="opacity: 1; transform: translateY(200px);">д</span><span class="char10" data-initial="ж" style="opacity: 1; transform: translateY(0px);">ж</span><span class="char11" data-initial="е" style="opacity: 1; transform: translateY(0px);">е</span><span class="char12" data-initial="р" style="opacity: 1; transform: translateY(0px);">р</span><span class="char10" data-initial="м" style="opacity: 1; transform: translateY(200px);"> м</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(0px);">и</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(670px);">л</span><span class="char10" data-initial="n" style="opacity: 1; transform: translateY(0px);">л</span><span class="char10" data-initial="и" style="opacity: 1; transform: translateY(0px);">и</span><span class="char10" data-initial="о" style="opacity: 1; transform: translateY(-200px);">о</span><span class="char10" data-initial="н" style="opacity: 1; transform: translateY(0px);">н</span><span class="char10" data-initial="е" style="opacity: 1; transform: translateY(0px);">е</span><span class="char10" data-initial="р" style="opacity: 1; transform: translateY(0px);">р</span><span class="char10" data-initial="о" style="opacity: 1; transform: translateY(0px);">о</span><span class="char10" data-initial="в" style="opacity: 1; transform: translateY(0px);">в</span></h3>
+                        <div class="team-desc hidden">
+                            <div class="team-details">
+                                <p>Мария! Для того, чтобы о продуктах компании узнали, в обычном мире используют маркетинг, но моя команда работает не в обычном мире. Мы продвигаемся с помощью магии:-)<br><br>
+
+Главный волшебник в Фаза Роста — это Саша.
+Большинство учениц, отвечая на вопрос “Как вы узнали о тренингах Ярослава Самойлова?”, говорят, что увидели рекламу в Facebook именно в тот момент, когда им это было позарез необходимо.
+“Ярослав, вы волшебник”, — говорят девушки. Нет, это не так — вся магия у нас от Александра.<br><br>
+
+Знание аудитории и щепотка волшебства — вот рецепт правильного маркетинга от Саши.
+</p>
+                            </div>
+                        </div>
+                        <div class="button-holder">
+                            <div class="hline"></div>
+                            <div class="team-toggle-button">
+                                <img class="btn"  src="img/x.png" alt="button"/>
+                                <img class="btn2"  src="img/-.png" alt="button" style="opacity:0;transform: rotate(-90deg);"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__section">
+                    <a class="content__link"><img class="content__img" src="img/set4/3.jpg" alt="img" style="transform: rotate(0deg);"></a>
+                    <h2 class="content__text" style="opacity: 1;"><span class="char1" data-initial="G" style="opacity: 0; transform: translateY(763px);">G</span><span class="char2" data-initial="a" style="opacity: 0; transform: translateY(-763px);">a</span><span class="char3" data-initial="r" style="opacity: 0; transform: translateY(763px);">r</span><span class="char4" data-initial="y" style="opacity: 0; transform: translateY(763px);">y</span><span class="char5" data-initial=" " style="opacity: 0; transform: translateX(912px);"> </span><span class="char6" data-initial="H" style="opacity: 0; transform: translateY(-763px);">H</span><span class="char7" data-initial="u" style="opacity: 0; transform: translateY(763px);">u</span><span class="char8" data-initial="n" style="opacity: 0; transform: translateY(763px);">n</span><span class="char9" data-initial="t" style="opacity: 0; transform: translateX(912px);">t</span></h2>
+		</div>
+		<div class="content__section">
+                    <a class="content__link"><img class="content__img" src="img/set4/4.jpg" alt="img" style="transform: rotate(0deg);"></a>
+                    <h2 class="content__text" style="opacity: 1;"><span class="char1" data-initial="K" style="opacity: 0; transform: translateY(763px);">K</span><span class="char2" data-initial="e" style="opacity: 0; transform: translateY(763px);">e</span><span class="char3" data-initial="v" style="opacity: 0; transform: translateX(-912px);">v</span><span class="char4" data-initial="i" style="opacity: 0; transform: translateY(-763px);">i</span><span class="char5" data-initial="n" style="opacity: 0; transform: translateY(763px);">n</span><span class="char6" data-initial=" " style="opacity: 0; transform: translateY(-763px);"> </span><span class="char7" data-initial="W" style="opacity: 0; transform: translateX(-912px);">W</span><span class="char8" data-initial="o" style="opacity: 0; transform: translateX(-912px);">o</span><span class="char9" data-initial="o" style="opacity: 0; transform: translateY(-763px);">o</span></h2>
+		</div>
+                <div class="content__section">
+                    <a class="content__link"><img class="content__img" src="img/set4/5.jpg" alt="img" style="transform: rotate(0deg);"></a>
+                    <h2 class="content__text" style="opacity: 1;"><span class="char1" data-initial="M" style="opacity: 0; transform: translateY(763px);">M</span><span class="char2" data-initial="i" style="opacity: 0; transform: translateY(-763px);">i</span><span class="char3" data-initial="k" style="opacity: 0; transform: translateX(912px);">k</span><span class="char4" data-initial="e" style="opacity: 0; transform: translateX(912px);">e</span><span class="char5" data-initial=" " style="opacity: 0; transform: translateY(763px);"> </span><span class="char6" data-initial="H" style="opacity: 0; transform: translateY(763px);">H</span><span class="char7" data-initial="o" style="opacity: 0; transform: translateY(763px);">o</span><span class="char8" data-initial="o" style="opacity: 0; transform: translateX(912px);">o</span><span class="char9" data-initial="d" style="opacity: 0; transform: translateX(912px);">d</span></h2>
+                </div>
+                <div class="content__section">
+                    <a class="content__link content__link--nobottom"><img class="content__img" src="img/set4/6.jpg" alt="img" style="transform: rotate(0deg);"></a>
+                    <h2 class="content__text" style="opacity: 1;"><span class="char1" data-initial="B" style="opacity: 0; transform: translateX(228px);">B</span><span class="char2" data-initial="e" style="opacity: 0; transform: translateY(-452px);">e</span><span class="char3" data-initial="n" style="opacity: 0; transform: translateX(228px);">n</span><span class="char4" data-initial=" " style="opacity: 0; transform: translateY(452px);"> </span><span class="char5" data-initial="F" style="opacity: 0; transform: translateY(452px);">F</span><span class="char6" data-initial="i" style="opacity: 0; transform: translateX(-228px);">i</span><span class="char7" data-initial="n" style="opacity: 0; transform: translateX(-228px);">n</span><span class="char8" data-initial="e" style="opacity: 0; transform: translateX(228px);">e</span></h2>
+                </div>
+                <div class="content__section">
+                    <h2 class="content__text" style="opacity: 1;"><span class="char1" data-initial="T" style="opacity: 0; transform: translateX(-228px);">T</span><span class="char2" data-initial="h" style="opacity: 0; transform: translateY(-452px);">h</span><span class="char3" data-initial="a" style="opacity: 0; transform: translateY(452px);">a</span><span class="char4" data-initial="n" style="opacity: 0; transform: translateX(228px);">n</span><span class="char5" data-initial="k" style="opacity: 0; transform: translateY(452px);">k</span><span class="char6" data-initial=" " style="opacity: 0; transform: translateX(-228px);"> </span><span class="char7" data-initial="y" style="opacity: 0; transform: translateX(-228px);">y</span><span class="char8" data-initial="o" style="opacity: 0; transform: translateY(452px);">o</span><span class="char9" data-initial="u" style="opacity: 0; transform: translateX(228px);">u</span></h2>
+                </div>
+            </div>
+            <div id="test">
+                
+            </div>
+	</main>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/charming.min.js"></script>
+	<script src="js/anime.min.js"></script>
+	<script src="js/demo4.js"></script>
+        <script src="js/toggler.js"></script>
+    </body>
+</html>

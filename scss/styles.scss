@@ -1,0 +1,46 @@
+@import "_mixins.scss";
+@import "_fonts.scss";
+@import '_vars.scss';
+@import "first-screen.scss"; 
+@import "_explanation.scss";
+
+body{
+    background-color:$bg-main;
+    @include font-f(n);
+    color:$text-color;
+}
+p{
+    font-size:$main-size;
+}
+h2{
+    @include font-f(b);
+    font-size:48px;
+}
+h3{
+    font-size:12px;
+    text-transform:uppercase;
+    padding: 30px 0 5px;
+    color: rgb(12, 133, 247);
+}
+.explanation h3{
+    letter-spacing: 4.56px;
+}
+
+.dlg{
+    display: table !important;
+    font-size: 12px;
+    color: #0c85f7;
+    margin: 50px 0 30px;
+    & > span{
+        width: auto;
+        padding: 0;
+        margin: 0;
+        letter-spacing: 1px;
+    }
+} 
+
+.team-desc.hidden{
+    height:0;
+}
+
+@import "_header.scss";

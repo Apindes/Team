@@ -1,0 +1,91 @@
+.explanation{
+
+    
+    @media(max-width:1380px){
+        padding-right: 6vmax;
+    }
+    &.centered{
+        h2,h3{text-align:center;}
+        .inner{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+    .container{
+        
+        text-align: left;
+        padding-left: 13vh;
+        @media(max-width:1050px){
+            &{
+                padding-left: 0%;
+                text-align: center
+            }
+        }
+        .inner{
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+
+             h2{
+                font-family: MontserratExtraBold;
+                white-space: normal !important;
+                letter-spacing: 1px !important;
+                font-size: 72px;
+                font-weight: 700;
+                line-height: 86.4px;
+                @media(max-width:1380px){
+                    font-size: 60px;
+                    line-height: 66.4px;
+                }
+                @media(max-width:980px){
+                    font-size: 40px;
+                    line-height: 46.4px;
+                }
+            }
+
+            .intro{
+                margin-top: 12vh;
+                padding-left: 35%;
+                min-width: 300px;
+                max-width: 87%;
+                @media(max-width:1550px){
+                    &{
+                        padding-left: 15%;
+                    }
+                }
+                p{
+                    line-height: 30px;
+                }
+            } 
+            p{
+                padding: 0 12vh;
+                text-align: justify;
+                line-height: 30px;
+            }
+        }
+        .hline{
+            width: 100%;
+            height: 2px;
+            background: #1b1b1b;
+            margin-left: -100%;
+            margin-bottom: -26px;
+                
+        }
+        .button-holder div:last-of-type{
+            margin-top:30px;
+            margin-left: -25px;
+            text-transform: uppercase;
+            opacity: 0.1;
+            color: #ffffff;     
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 4.56px;
+        }
+    }
+}
