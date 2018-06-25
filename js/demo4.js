@@ -30,6 +30,27 @@
         }
         enter(direction = 'down') {
             this.DOM.title.word.style.opacity = 1;
+            var sid = this.DOM.el.getAttribute('id');
+            if(sid){
+               var arr = document.getElementsByClassName("nav-section");
+
+                [].forEach.call(arr, function(el) {
+                    el.classList.remove("active");
+                });
+             
+                for(var i=0; i < arr.length; i++){
+                    var d = arr[i]; 
+                    var target = d.getAttribute("data-target");
+                    if(target !== undefined && target === sid){
+                         console.log('identical');
+                        document.querySelector('.nav-section').classList.remove('active');
+                         d.classList.add('active');
+//                        document.querySelectorAll(".navs[data-target]").classList.add('active');
+//                        console.log('has target data '+arr[i].classList.dataset.target);
+                    }
+                }
+            }
+           
 
             this.DOM.title.letters.forEach((letter,pos) => {
                 anime.remove(letter);
@@ -70,7 +91,8 @@
                         value: [0,1],
                         duration: 200,
                         easing: 'linear'
-                    }
+                    },
+                    textShadow: '5px 5px 1px #ff0000, 10px 10px 1px #0000ff' //.style.textShadow = "5px 5px 1px #ff0000, 10px 10px 1px #0000ff";
                 };
                 if ( anime.random(0,1) > 0.5 ) {
                     letterAnim.translateX = [anime.random(0,1) > 0.5 ? -window.innerWidth :  window.innerWidth, 0];
@@ -80,6 +102,14 @@
                 }
                 anime(letterAnim);
             });
+//            $(this.DOM.sub_title.sub_letters).animate({
+//                myBlurWhiteEffect: 6
+//            },{
+//                duration: 1500
+//            },function() {
+//                this.style.textShadow = 'unset';
+//                $(this).css('textShadow','unset');
+//            });
         // **********************************************
 
             anime.remove(this.DOM.image);
@@ -214,6 +244,10 @@ function collapse(obj1, obj2, btn){
 
 }
 
+function normalizeFocus(section){
+    $('html, body').animate({ scrollTop: $(section.parentElement).offset().top + 20 }, 1000);
+}
+
 
 var section = document.getElementsByClassName("team-toggle-button");
 var toggler = {  
@@ -234,6 +268,7 @@ var toggler = {
                 // Прячем первое и открываем второе изображения
                 toggleClass(img2,'hidden');
                 toggleClass(img,'hidden'); 
+                normalizeFocus(box);
             }
         swap: function swap(text_block,btn1,btn2){
                 if(text_block.classList.contains('hidden')){
@@ -291,3 +326,53 @@ function toggleClass(element,class_name){
         }
     }
 }
+
+function parse(word,type){
+    var hw = word.split('');
+   
+    var res = '';
+    if(type === 'h2'){
+        res+='<h2 class="content__text" style="opacity: 1;">';
+        for(var i = 0; i < hw.length; i++){
+            res += '<span>'+hw[i]+'</span>';
+        }
+        res+='</h2>';
+    }
+    if(type === 'h3'){
+        res+= '<h3 class="content__subtext">';
+        for(var i = 0; i < hw.length; i++){
+            res += '<span>'+hw[i]+'</span>';
+        }
+        res+='</h3>';
+    }
+    console.log(res);
+    return res;
+}
+
+function sss(arr1){
+    var r = '';
+    for(var i = 0; i < arr1.length; i++){
+        if(i % 2 == 0){ 
+            var h3 = parse(arr1[i], 'h2');
+            r+= h3;
+        }    
+        else{
+            var h2 = parse(arr1[i], 'h3');
+            r+= h2;
+        }
+    }
+   document.getElementById('test').innerHTML = r;
+}
+
+var args = [  
+    'Как вам команда Ярослава Самойлова?','обычный ди-джей'
+]
+
+//sss(args);
+
+
+    $.fx.step.myBlurWhiteEffect = function (fx) {
+        $(fx.elem).css({
+            textShadow: '0 0 ' + Math.floor(fx.now) + 'px #FFFFFF'
+        });
+    }

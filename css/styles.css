@@ -117,11 +117,15 @@
           padding-left: 15%; } }
       .explanation .container .inner .intro p {
         line-height: 30px; }
+    .explanation .container .inner p {
+      padding: 0 12vh;
+      text-align: justify;
+      line-height: 30px; }
   .explanation .container .hline {
     width: 100%;
     height: 2px;
     background: #1b1b1b;
-    margin-left: -100%;
+    margin-left: calc(-100% - 8px);
     margin-bottom: -26px; }
   .explanation .container .button-holder div:last-of-type {
     margin-top: 30px;
@@ -133,6 +137,40 @@
     font-weight: 700;
     letter-spacing: 4.56px; }
 
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25.06.2018, 12:59:13
+    Author     : P.Artem
+*/
+@media (max-width: 880px) {
+  main {
+    overflow: hidden; }
+
+  header {
+    padding: 15px;
+    /*Mobile menu*/ }
+
+  .content__section {
+    padding-right: 6vmax; }
+    .content__section .content__link {
+      display: inherit; }
+      .content__section .content__link .content__img {
+        margin: auto; }
+        .content__section .content__link .content__img.under {
+          top: 0;
+          right: 0;
+          left: 0; }
+      .content__section .content__link .fixed_content__text {
+        width: 100%;
+        bottom: 4vmax; }
+    .content__section .fixed_content__text {
+      width: calc(100% - 12vmax); }
+      .content__section .fixed_content__text .js .ioapi .fixed_content__text .button-holder {
+        margin-top: 4%; } }
 body {
   background-color: black;
   font-family: MontserratRegular;
@@ -177,7 +215,8 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 10px; }
+    padding-left: 10px;
+    width: 40px; }
     .left-nav ul li {
       margin: 2px 0;
       list-style: none;
@@ -192,11 +231,13 @@ h3 {
         margin: 5px;
         padding: 3px;
         background-color: #323232;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: all .5s; }
       .left-nav ul li.active:after {
         background: white;
         width: 20px;
-        height: 20px; }
+        height: 20px;
+        transition: all .5s; }
 
 header .logo {
   flex: 0.2; }

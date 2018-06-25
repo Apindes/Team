@@ -88,7 +88,8 @@ button:focus {
 }
 
 main {
-	position: relative;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Header */
@@ -199,11 +200,11 @@ a.demo--current {
 	margin: 10vh 0 0;
 }
 
-.content__section:first-child,
+/*.content__section:first-child,
 .content__section:last-child {
 	height: calc(100vh - 9.875em);
-	/*text-align: left;*/
-}
+	text-align: left;
+}*/
 
 .content__link {
         position:relative;
@@ -289,7 +290,7 @@ a.demo--current {
     transform: rotate(45deg);
     border: 2px solid #1b1b1b;
     position:relative;
-    margin-left: 8px;
+    /*margin-left: 8px;*/
     cursor:pointer;
 }
 .js .ioapi .fixed_content__text .team-toggle-button img,
@@ -329,9 +330,8 @@ a.demo--current {
 
 @media screen and (max-width: 50em) {
 	.codrops-header {
-		display: block;
-		text-align: center;
-		padding: 2.5rem 1rem 0;
+            text-align: center;
+            padding: 1rem 1rem 0;
 	}
 	.codrops-header__title {
 		margin: 1rem 0;
@@ -358,7 +358,8 @@ a.demo--current {
 	}
 	.content__section:first-child, 
 	.content__section:last-child {
-		height: calc(100vh - 13.875em);
+		/*height: calc(100vh - 13.875em);*/
+                height:inherit;
 	}
 	.content__main, 
 	.content__contact {
