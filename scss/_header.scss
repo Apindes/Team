@@ -24,11 +24,13 @@
                 padding: 3px;
                 background-color: #323232;
                 cursor:pointer;
+                transition: all .5s;
             }
             &.active:after {
                 background: white;
                 width:20px;
                 height:20px;
+                transition: all .5s;
             }
         }
     }
