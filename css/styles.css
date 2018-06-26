@@ -16,7 +16,10 @@
 /*Colors*/
 /*Sizes*/
 .first-screen {
-  height: 100%; }
+  height: 100%;
+  /*        @media(max-width:1380px){
+              font-size: 60px;
+          }*/ }
   .first-screen:not(:first-of-type) {
     padding-top: 10vh; }
     .first-screen:not(:first-of-type) .container {
@@ -24,16 +27,6 @@
   @media (max-width: 1380px) {
     .first-screen {
       padding-right: 6vmax; } }
-  .first-screen h1 {
-    white-space: normal !important;
-    letter-spacing: 1px !important;
-    font-size: 72px;
-    font-weight: 700;
-    line-height: 86.4px;
-    font-family: MontserratExtraBold; }
-    @media (max-width: 1380px) {
-      .first-screen h1 {
-        font-size: 60px; } }
   .first-screen .container {
     margin-top: 25vh;
     text-align: left;
@@ -125,7 +118,7 @@
     width: 100%;
     height: 2px;
     background: #1b1b1b;
-    margin-left: calc(-100% - 8px);
+    margin-left: calc(-100%);
     margin-bottom: -26px; }
   .explanation .container .button-holder div:last-of-type {
     margin-top: 30px;
@@ -171,6 +164,25 @@ and open the template in the editor.
       width: calc(100% - 12vmax); }
       .content__section .fixed_content__text .js .ioapi .fixed_content__text .button-holder {
         margin-top: 4%; } }
+@media (max-width: 800px) {
+  p {
+    font-size: 14px;
+    line-height: 25px; }
+
+  .explanation .container .inner p {
+    padding: 10px; }
+  .explanation .container div:last-of-type > div {
+    bottom: 0vh !important; }
+
+  .content__section:not(.explanation) .fixed_content__text {
+    padding-left: 0; } }
+@media (max-width: 500px) {
+  p {
+    font-size: 13px !important;
+    line-height: 23px; }
+
+  .ioapi .fixed_content__text .button-holder {
+    margin-top: 0%; } }
 body {
   background-color: black;
   font-family: MontserratRegular;
@@ -178,6 +190,20 @@ body {
 
 p {
   font-size: 16px; }
+
+h1 {
+  white-space: normal !important;
+  letter-spacing: 1px !important;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 86.4px;
+  font-family: MontserratExtraBold; }
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 30px; } }
+  @media (max-width: 1380px) {
+    h1 {
+      font-size: 60px; } }
 
 h2 {
   font-family: MontserratBold;

@@ -9,17 +9,10 @@
     @media(max-width:1380px){
         padding-right: 6vmax;
     }
-    h1{  
-        white-space: normal !important;
-        letter-spacing: 1px !important;
-        font-size: 72px;
-        font-weight: 700;
-        line-height: 86.4px;
-        font-family:MontserratExtraBold;
-        @media(max-width:1380px){
+    
+/*        @media(max-width:1380px){
             font-size: 60px;
-        }
-    }
+        }*/
     .container{
         margin-top: 25vh;
         text-align: left;

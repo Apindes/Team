@@ -13,6 +13,26 @@ body{
 p{
     font-size:$main-size;
 }
+h1{
+ 
+    white-space: normal !important;
+    letter-spacing: 1px !important;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 86.4px;
+    font-family:MontserratExtraBold;
+    
+    @media(max-width:800px){
+        &{
+            font-size:30px;
+        }
+    }
+    @media (max-width: 1380px){
+        &{
+            font-size: 60px;
+        }
+    }
+}
 h2{
     @include font-f(b);
     font-size:48px;

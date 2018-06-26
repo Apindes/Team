@@ -45,3 +45,41 @@ and open the template in the editor.
         
     }
 }
+
+
+@media (max-width:800px){
+    p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .explanation{
+        .container{
+            .inner {
+                p{
+                    padding:10px;
+                }
+            }
+            div:last-of-type{
+                &>div{
+                        bottom: 0vh !important;
+                }
+            }
+        }
+    }
+    
+    .content__section:not(.explanation){
+        .fixed_content__text{
+            padding-left: 0;
+        }
+    }
+}
+
+@media (max-width:500px){
+    p {
+        font-size: 13px !important;
+        line-height: 23px;
+    }
+    .ioapi .fixed_content__text .button-holder{
+            margin-top: 0%;
+    }
+}

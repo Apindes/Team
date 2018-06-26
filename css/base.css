@@ -290,7 +290,7 @@ a.demo--current {
     transform: rotate(45deg);
     border: 2px solid #1b1b1b;
     position:relative;
-    /*margin-left: 8px;*/
+    margin-left: 8px;
     cursor:pointer;
 }
 .js .ioapi .fixed_content__text .team-toggle-button img,
