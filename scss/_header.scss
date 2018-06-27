@@ -40,6 +40,14 @@
 header{
     .logo{
         flex:0.2;
+         @media(max-width:880px){
+            &{
+                position: absolute;
+                left: 0;
+                right: 0;
+                text-align: center;
+            }
+         }
     }
     .nav{
         flex:2;
@@ -57,6 +65,13 @@ header{
                 &.active{
                     color:white;
                 }
+                
+                @media(max-width:880px){
+                    &{
+                        font-size:0;
+                    }
+                }
+                
             }
         }
     }

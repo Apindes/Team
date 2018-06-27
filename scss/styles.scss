@@ -4,6 +4,7 @@
 @import "first-screen.scss"; 
 @import "_explanation.scss";
 @import "_mobile.scss";
+@import "_mobile-nav.scss";
 
 body{
     background-color:$bg-main;
@@ -62,6 +63,13 @@ h3{
 
 .team-desc.hidden{
     height:0;
+}
+
+.content-footer{
+    position: absolute;
+    bottom: 15vh;
+    width: 50%;
+    right: calc(0% + 35px);
 }
 
 @import "_header.scss";

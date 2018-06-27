@@ -42,7 +42,7 @@
                     var d = arr[i]; 
                     var target = d.getAttribute("data-target");
                     if(target !== undefined && target === sid){
-                         console.log('identical');
+//                        console.log('identical');
                         document.querySelector('.nav-section').classList.remove('active');
                          d.classList.add('active');
 //                        document.querySelectorAll(".navs[data-target]").classList.add('active');
@@ -245,7 +245,7 @@ function collapse(obj1, obj2, btn){
 }
 
 function normalizeFocus(section){
-    $('html, body').animate({ scrollTop: $(section.parentElement).offset().top + 20 }, 1000);
+    $('html, body').animate({ scrollTop: $(section.parentElement).offset().top - 50 }, 1000);
 }
 
 

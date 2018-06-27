@@ -7,6 +7,11 @@ and open the template in the editor.
     Created on : 25.06.2018, 12:59:13
     Author     : P.Artem
 */
+@media (max-width:1000px){
+    .fixed_content__text{
+        width:80%;
+    }
+}
 @media (max-width:880px){
     main{
         overflow: hidden;
@@ -21,6 +26,13 @@ and open the template in the editor.
     }
     .content__section{
         padding-right: 6vmax;
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
         .content__link {
             display: inherit;
             .content__img{
@@ -75,11 +87,28 @@ and open the template in the editor.
 }
 
 @media (max-width:500px){
+    h1{
+        font-size: 30px !important;
+        line-height: 35px !important;
+    }
+    h2{
+        font-size: 20px !important;
+        line-height: 25px !important;
+    }
+    .intro{
+        padding-left: 0 !important;
+    }
     p {
         font-size: 13px !important;
-        line-height: 23px;
+        line-height: 23px !important;
     }
     .ioapi .fixed_content__text .button-holder{
             margin-top: 0%;
+    }
+    .first-screen .container .intro {
+        margin-top: 5vh;
+    }
+    .team-details p{
+        background: rgba(0, 0, 0, 0.75);
     }
 }

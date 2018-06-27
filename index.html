@@ -32,6 +32,35 @@
                <div class="logo">
                     <img src="img/white-logo.png" alt="logo"/>
                 </div>
+                <div class="mobile-nav">
+                    <input id="toggle" type="checkbox">
+
+                    <!-- ВАЖНО: любой элемент, который мы хотим модифицировать при изменении состояния чекбокса, является «братским» элементом для чекбокса -->
+
+                    <!-- Эта метка привязана к чекбоксу и будет содержать переключение «кнопок» -->
+                    <label class="toggle-container" for="toggle">
+                    <!-- Если меню открыто, то здесь будет иконка «X», в противном случае просто иконка гамбургера -->
+                        <span class="button button-toggle"></span>
+                    </label>
+
+                    <!-- Навигация -->
+                    <nav class="nav">
+                        <a rel="nofollow" rel="noreferrer" class="nav-item" href="">ГЛАВНАЯ</a>
+                        <a rel="nofollow" rel="noreferrer" class="nav-item" href="">ЧИТАТЬ БЛОГ</a>
+                        <a rel="nofollow" rel="noreferrer" class="nav-item" href="">ОБУЧЕНИЕ</a>
+                        <a rel="nofollow" rel="noreferrer" class="nav-item" href="">КОМАНДА ФАЗА РОСТА</a>
+                    </nav>
+
+                    <!-- Просто фиктивное содержимое, как в анимированном gif -->
+                    <section class="dummy-content">
+                        <div class="circle"></div>
+                        <div class="text">
+                        <span></span><span></span>
+                        </div>
+                        <div class="square-top"></div>
+                        <div class="square-behind"></div>
+                    </section>
+                </div>
                 <div class="nav">
                     <ul>
                         <li class="nav-item">Главная</li>
@@ -71,7 +100,7 @@
                             </div>
                         </div> 
                         <div>
-                            <div class="" style="position:absolute;bottom:8vh; width: calc(50% - 25px);right:50">
+                            <div class="content-footer" style="position:absolute;bottom:8vh; width: calc(50% - 25px);right:50">
                                 <div class="team-desc hidden">
                                     <div class="team-details"></div>
                                 </div>
@@ -101,7 +130,7 @@
                             </div>
                         </div> 
                         <div>
-                            <div class="" style="position:absolute;bottom:0vh; width: calc(50% - 25px);right:50">
+                            <div class="content-footer" style="position:absolute;bottom:0vh; width: calc(50% - 25px);right:50">
                                 <div class="team-desc hidden">
                                     <div class="team-details"></div>
                                 </div>
@@ -125,7 +154,7 @@
                                 <h2 class="content__text" style="opacity: 1;"><span class="char1">Л</span><span class="char2">Ю</span><span class="char3">Д</span><span class="char4">И</span></h2><h3 class="content__subtext" style="opacity:1;"><span class="char1">P</span><span class="char1">E</span><span class="char1">O</span><span class="char1">P</span><span class="char1">L</span><span class="char1">E</span></h3>
                             </div> 
                             <div>
-                                <div class="" style="position:absolute;bottom:15vh; width: calc(50% - 15px);right:50">
+                                <div class="content-footer" style="position:absolute;bottom:15vh; width: calc(50% - 15px);right:50">
                                     <div class="team-desc hidden">
                                         <div class="team-details"></div>
                                     </div>
@@ -184,7 +213,7 @@
                                 </div>
                             </div> 
                             <div>
-                                <div class="" style="position:absolute;bottom:10vh; width: calc(50% - 25px);right:50">
+                                <div class="content-footer" style="position:absolute;bottom:10vh; width: calc(50% - 25px);right:50">
                                     <div class="team-desc hidden">
                                         <div class="team-details"></div>
                                     </div>
@@ -282,7 +311,7 @@
                                 <h2 class="content__text" style="opacity: 1;"><span class="char1">Д</span><span class="char2">Е</span><span class="char3">Н</span><span class="char4">Ь</span><span class="char4">Г</span><span class="char4">И</span></h2><h3 class="content__subtext" style="opacity:1;"><span class="char1">M</span><span class="char1">O</span><span class="char1">N</span><span class="char1">E</span><span class="char1">Y</span></h3>
                             </div> 
                             <div>
-                                <div class="" style="position:absolute;bottom:15vh; width: calc(50% - 15px);right:50">
+                                <div class="content-footer" style="position:absolute;bottom:15vh; width: calc(50% - 15px);right:50">
                                     <div class="team-desc hidden">
                                         <div class="team-details"></div>
                                     </div>
@@ -351,13 +380,13 @@
 
                 <section  id="programms" class="block">
                     <!--Programms block-->
-                    <div class="content__section explanation centered " id="programms">
+                    <div class="content__section explanation centered " id="programms-block">
                         <div class="container">
                             <div class="inner">
                                 <h2 class="content__text" style="opacity: 1;"><span class="char1">П</span><span class="char2">Р</span><span class="char3">О</span><span class="char4">Г</span><span class="char4">Р</span><span class="char4">А</span><span class="char4">М</span><span class="char4">М</span><span class="char4">Ы</span></h2><h3 class="content__subtext" style="opacity:1;"><span class="char1">P</span><span class="char1">R</span><span class="char1">O</span><span class="char1">G</span><span class="char1">R</span><span class="char1">A</span><span class="char1">M</span><span class="char1">S</span></h3>
                             </div> 
                             <div>
-                                <div class="" style="position:absolute;bottom:15vh; width: calc(50% - 15px);right:50">
+                                <div class="content-footer" style="position:absolute;bottom:15vh; width: calc(50% - 15px);right:50">
                                     <div class="team-desc hidden">
                                         <div class="team-details"></div>
                                     </div>
@@ -714,7 +743,7 @@
     </p>
                             </div> 
                             <div>
-                                <div class="" style="position:absolute;bottom:15vh; width: calc(50% - 15px);right:50">
+                                <div class="content-footer" style="position:absolute;bottom:15vh; width: calc(50% - 15px);right:50">
                                     <div class="team-desc hidden">
                                         <div class="team-details"></div>
                                     </div>
@@ -837,7 +866,7 @@
                                 <p>Сложнее всего устроен отдел продаж, у него многоуровневая иерархия с запутанными для непосвященного лица связями. Руководит этой темной структурой Владимир.</p>
                             </div> 
                             <div>
-                                <div class="" style="position:absolute;bottom:15vh; width: calc(50% - 15px);right:50">
+                                <div class="content-footer" style="position:absolute;bottom:15vh; width: calc(50% - 15px);right:50">
                                     <div class="team-desc hidden">
                                         <div class="team-details"></div>
                                     </div>
@@ -1291,7 +1320,7 @@
                                 <h2 class="content__text" style="opacity: 1;"><span class="char1">З</span><span class="char2">А</span><span class="char3">Б</span><span class="char4">О</span><span class="char4">Т</span><span class="char4">А</span></h2><h3 class="content__subtext" style="opacity:1;"><span class="char1">C</span><span class="char1">A</span><span class="char1">R</span><span class="char1">E</span></h3>
                             </div> 
                             <div>
-                                <div class="" style="position:absolute;bottom:15vh; width: calc(50% - 25px);right:50">
+                                <div class="content-footer" style="position:absolute;bottom:15vh; width: calc(50% - 25px);right:50">
                                     <div class="team-desc hidden">
                                         <div class="team-details"></div>
                                     </div>
@@ -1559,6 +1588,9 @@
 	<script src="js/anime.min.js"></script>
 	<script src="js/demo4.js"></script>
         <script src="js/scroll.js"></script>
-        <!--<script src="js/toggler.js"></script>-->
+        <script src="js/scroll100vh.js"></script>
+        <!--<script src="js/autoscroll.js"></script>-->
+        
+
     </body>
 </html>

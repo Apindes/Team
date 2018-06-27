@@ -190,13 +190,15 @@ a.demo--current {
 	text-align: right;
 	padding: 0 6vmax;
         padding-right: 12em;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .content__section:first-child {
 	margin: 0 0 10vh;
 }
 
-.content__section:last-child {
+.content__section {
 	margin: 10vh 0 0;
 }
 
@@ -211,7 +213,8 @@ a.demo--current {
 	display: block;
 	position: relative;
 	max-width: 100%;
-	margin: 10vh 0 30vh auto;
+	/*margin: 10vh 0 30vh auto;*/
+        margin: 0;
 }
 
 .content__link--nobottom {
@@ -256,7 +259,7 @@ a.demo--current {
 	position: absolute;
 	bottom: 7vmax;
 	padding-left: 6vmax;
-	z-index: 1000;
+	/*z-index: 1000;*/
         text-align: left;
         width: 40%;
 }
@@ -274,6 +277,21 @@ a.demo--current {
 .js .ioapi .content__text h2,.js .ioapi .fixed_content__text .team-desc{
     line-height: 30px;
     transition: all 1s;
+}
+
+@media (max-height:700px){
+    h1{
+       font-size: 40px !important;
+    }
+    .fixed_content__text .team-desc p{
+       line-height: 22px;
+    }
+    .fixed_content__text {
+        bottom: 2vmax;
+    }
+    .explanation .container div:not(.inner) > div{
+        bottom: 2vh !important;
+    }
 }
 
 .js .ioapi .content__text h2,.js .ioapi .fixed_content__text .button-holder{
@@ -359,7 +377,8 @@ a.demo--current {
 	.content__section:first-child, 
 	.content__section:last-child {
 		/*height: calc(100vh - 13.875em);*/
-                height:inherit;
+            /*height:inherit;*/
+            height: 100vh;
 	}
 	.content__main, 
 	.content__contact {
