@@ -44,7 +44,7 @@
                     if(target !== undefined && target === sid){
 //                        console.log('identical');
                         document.querySelector('.nav-section').classList.remove('active');
-                         d.classList.add('active');
+                        d.classList.add('active');
 //                        document.querySelectorAll(".navs[data-target]").classList.add('active');
 //                        console.log('has target data '+arr[i].classList.dataset.target);
                     }
@@ -102,14 +102,7 @@
                 }
                 anime(letterAnim);
             });
-//            $(this.DOM.sub_title.sub_letters).animate({
-//                myBlurWhiteEffect: 6
-//            },{
-//                duration: 1500
-//            },function() {
-//                this.style.textShadow = 'unset';
-//                $(this).css('textShadow','unset');
-//            });
+
         // **********************************************
 
             anime.remove(this.DOM.image);
@@ -179,11 +172,8 @@
                     
                     this.DOM.btnplus.style.opacity = 1;
                     this.DOM.btnminus.style.opacity = 0;
-                    
+                    this.DOM.team_desc.team_desc.style.height = 0 + 'px';
                 }
-                
-                 
-
             });
             
             anime.remove(this.DOM.image);
@@ -194,6 +184,8 @@
                 rotate: 0,
                 opacity:0.2
             });
+            
+            
         }
     }
 
@@ -235,7 +227,6 @@ function collapse(obj1, obj2, btn){
     var isVisibleBlock  = obj2.style.display !== 'none';
     
      if(isVisibleBlock){
-         console.log("button triggered onclick event");
         btn.click();
     }
     
@@ -257,28 +248,34 @@ var toggler = {
             Array.from(section).forEach(function(element){
                 element.addEventListener('click', toggleVisibility);  
             }); 
-        toggle: function toggleVisibility(){
-                var box = this.parentElement.parentElement;
-                var text_block = box.querySelector('.team-desc');
-                var btn1 = box.querySelector(".btn");
-                var btn2 = box.querySelector(".btn2");
-                swap(text_block,btn1,btn2);
-                var img2 = box.parentElement.querySelector(".under");
-                var img = box.parentElement.querySelector("img:not(.under)");
-                // Прячем первое и открываем второе изображения
-                toggleClass(img2,'hidden');
-                toggleClass(img,'hidden'); 
-                normalizeFocus(box);
-            }
-        swap: function swap(text_block,btn1,btn2){
-                if(text_block.classList.contains('hidden')){
-                   fadeOutAndfadeIn(btn2, btn1);
-                   text_block.classList.remove('hidden');
-                }else{
-                   fadeOutAndfadeIn(btn1, btn2);
-                   text_block.classList.add('hidden');
+            toggle: function toggleVisibility(){
+                    var box = this.parentElement.parentElement;
+                    var text_block = box.querySelector('.team-desc');
+                    var btn1 = box.querySelector(".btn");
+                    var btn2 = box.querySelector(".btn2");
+                    swap(text_block,btn1,btn2);
+                    var img2 = box.parentElement.querySelector(".under");
+                    var img = box.parentElement.querySelector("img:not(.under)");
+                    // Прячем первое и открываем второе изображения
+                    toggleClass(img2,'hidden');
+                    toggleClass(img,'hidden'); 
+                    normalizeFocus(box);
+                   
                 }
-            }
+            swap: function swap(text_block,btn1,btn2){
+                    var h = text_block.scrollHeight; 
+                    
+                    if(text_block.classList.contains('hidden')){
+                       fadeOutAndfadeIn(btn2, btn1);
+                       text_block.classList.remove('hidden');
+                       text_block.style.height = h + 'px';
+                    }else{
+                       text_block.style.height = 0 + 'px';
+                       fadeOutAndfadeIn(btn1, btn2);
+                       text_block.classList.add('hidden');
+                    }
+                }
+         
         }   
 };
 toggler.init(section);

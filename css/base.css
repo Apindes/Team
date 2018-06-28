@@ -18,7 +18,6 @@ body {
 
 a {
 	text-decoration: none;
-	
 	outline: none;
 	cursor: pointer;
 }
@@ -189,7 +188,7 @@ a.demo--current {
 	position: relative;
 	text-align: right;
 	padding: 0 6vmax;
-        padding-right: 12em;
+        /*padding-right: 12em;*/
     height: 100vh;
     overflow: hidden;
 }
@@ -248,7 +247,6 @@ a.demo--current {
 .content__main,
 .content__contact {
 	position: absolute;
-	bottom: calc(var(--fontsize-scroll-text) * 1.5 + 6vmax);
 }
 
 .content__main span {
@@ -259,7 +257,7 @@ a.demo--current {
 	position: absolute;
 	bottom: 7vmax;
 	padding-left: 6vmax;
-	/*z-index: 1000;*/
+	z-index: 200;
         text-align: left;
         width: 40%;
 }
@@ -272,7 +270,8 @@ a.demo--current {
         letter-spacing: 14.02px;
 }
 .js .ioapi .content__text h2,.js .ioapi .fixed_content__text {
-       position: fixed;
+    position: fixed;
+    z-index: 2;
 }
 .js .ioapi .content__text h2,.js .ioapi .fixed_content__text .team-desc{
     line-height: 30px;
@@ -308,7 +307,7 @@ a.demo--current {
     transform: rotate(45deg);
     border: 2px solid #1b1b1b;
     position:relative;
-    margin-left: 8px;
+    margin-left: 7px;
     cursor:pointer;
 }
 .js .ioapi .fixed_content__text .team-toggle-button img,
@@ -350,6 +349,7 @@ a.demo--current {
 	.codrops-header {
             text-align: center;
             padding: 1rem 1rem 0;
+            height: 50px;
 	}
 	.codrops-header__title {
 		margin: 1rem 0;
